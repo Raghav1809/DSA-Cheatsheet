@@ -1,0 +1,19 @@
+// Printing the fibonacci series for the Nth number
+#include<iostream>
+using namespace std;
+
+int fib(int n){
+    if(n<=1){
+        return n;
+    }
+    int last = fib(n-1);
+    int slast = fib(n-2);
+    return last + slast;
+}
+
+int main(){
+    int n;
+    cin >> n;
+    cout << "The fibonacci is " << fib(n);
+    return 0;
+}
